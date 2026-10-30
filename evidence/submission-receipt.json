@@ -1,0 +1,17 @@
+{
+  "status": "received",
+  "observedAt": "2026-10-30T22:15:32.199Z",
+  "officialForm": "https://www.builder.io/hackathon/submit",
+  "project": "QuoteCheck — See the whole quote",
+  "creator": "Bruno Fernandes",
+  "team": "solo",
+  "repository": "https://github.com/Brunof94-debug/quotecheck-agent-native",
+  "publicSample": "https://brunof94-debug.github.io/quotecheck-agent-native/",
+  "publicClip": "https://clips.agent-native.com/share/VPtqwOBQYvAU",
+  "confirmationHeading": "Thank you for submitting.",
+  "confirmationMessage": "Your project submission has been received.",
+  "receiptNumber": null,
+  "screenshot": "screenshots/submission-confirmed.jpg",
+  "rulesAcceptedWithUserAuthorization": true,
+  "marketingOptIn": false
+}

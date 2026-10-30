@@ -74,6 +74,8 @@ The model's prose is a draft, not a factual certification. The original lines an
 
 Created during the [Builder.io Agent-Native Hackathon](https://www.builder.io/hackathon), starting **30 October 2026**, after the October 27 opening. Bruno Fernandes is the solo participant; development is assisted by Codex. The UI, comparison logic, action definitions, local transport/runtime, tests and synthetic data were newly authored for this entry. Pre-existing libraries, model weights and fonts are disclosed in THIRD_PARTY.md.
 
-Official deadline: November 9, 2026 at 23:59 Pacific / November 10 at 04:59 America/Sao_Paulo. [Official rules](https://www.builder.io/hackathon/rules). A repository or recording alone does not constitute a submitted entry; submission status will be recorded separately once an actual receipt exists.
+**Submitted on October 30, 2026.** The official form confirmed “Your project submission has been received.” See [participation record](docs/participation.md) and the saved confirmation screenshot. This confirms receipt, not an eligibility decision or prize.
+
+Official deadline: November 9, 2026 at 23:59 Pacific / November 10 at 04:59 America/Sao_Paulo. [Official rules](https://www.builder.io/hackathon/rules).
 
 MIT license for original code.

@@ -1,5 +1,7 @@
 # QuoteCheck — See the whole quote
 
+Status: submitted on October 30, 2026; official form receipt confirmed. This document preserves the submitted project description and public links.
+
 Creator: Bruno Fernandes, solo.
 
 ## Project description
@@ -28,4 +30,4 @@ Original development began on October 30, 2026, during the hackathon. Bruno is t
 - Slides: optional, leave blank
 - Marketing: leave unchecked
 
-Do not submit until the public Clips URL exists and the required agreements are authorized at the final step. A published repository or demo is not a contest receipt.
+The participant authorized the required rules and data processing before the final submission. Marketing was left unchecked. Receipt evidence is linked from participation.md.
