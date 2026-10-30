@@ -1,0 +1,332 @@
+[
+  {
+    "date": "2026-10-30",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "modelSha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+    "brief": {
+      "title": "Launch packaging",
+      "quantity": 1000,
+      "budgetCents": 280000,
+      "deliveryBy": "2026-11-28",
+      "minimumRecycled": 70,
+      "priority": "lowest_total"
+    },
+    "quotes": [
+      {
+        "id": "alder",
+        "name": "Alder Print",
+        "text": "ALDER PRINT / QUOTE ALD-104\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.40\nSetup: USD 120.00\nShipping: USD 95.00\nTax: included\nDelivery: 2026-11-24\nRecycled content: 80%\nPrices apply only to the quantity above.",
+        "short": "AP",
+        "accent": "clay",
+        "reference": "ALD-104"
+      },
+      {
+        "id": "northline",
+        "name": "Northline Packaging",
+        "text": "NORTHLINE PACKAGING / QUOTE NTH-208\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.05\nSetup: USD 180.00\nShipping: charged separately; amount to be confirmed\nTax: included\nDelivery: 2026-11-27\nRecycled content: 70%\nPlease request the freight charge before ordering.",
+        "short": "NP",
+        "accent": "blue",
+        "reference": "NTH-208"
+      },
+      {
+        "id": "paperfield",
+        "name": "Paperfield Co.",
+        "text": "PAPERFIELD CO. / QUOTE PAP-312\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.65\nSetup: USD 0.00\nShipping: USD 0.00\nTax: included\nDelivery: 2026-11-22\nRecycled content: 100%\nSetup and standard freight are included in this price.",
+        "short": "PC",
+        "accent": "sage",
+        "reference": "PAP-312"
+      }
+    ],
+    "review": {
+      "id": "089598b1-c3fc-4c75-a21a-b7053203ef34",
+      "actor": "agent",
+      "sources": [
+        {
+          "id": "alder:1",
+          "text": "ALDER PRINT / QUOTE ALD-104",
+          "number": 1,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:2",
+          "text": "Item: Custom printed mailer boxes",
+          "number": 2,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:3",
+          "text": "Quantity: 1000",
+          "number": 3,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:4",
+          "text": "Unit price: USD 2.40",
+          "number": 4,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:5",
+          "text": "Setup: USD 120.00",
+          "number": 5,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:6",
+          "text": "Shipping: USD 95.00",
+          "number": 6,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:7",
+          "text": "Tax: included",
+          "number": 7,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        },
+        {
+          "id": "alder:8",
+          "text": "Delivery: 2026-11-24",
+          "number": 8,
+          "quoteId": "alder",
+          "quoteName": "Alder Print"
+        }
+      ],
+      "question": {
+        "text": "Could you please provide the final shipping amount for Northline Packaging's quote?",
+        "quoteId": "northline",
+        "sourceId": "northline:6"
+      },
+      "revision": 1,
+      "createdAt": "2026-10-30T21:44:03.270Z",
+      "rationale": "Alder Print offers $2,615.00, meeting all brief requirements including recycled content and delivery date. Missing Northline freight must be confirmed before its complete total can be compared.",
+      "sourceIds": [
+        "alder:1",
+        "alder:2",
+        "alder:3",
+        "alder:4",
+        "alder:5",
+        "alder:6",
+        "alder:7",
+        "alder:8"
+      ],
+      "candidateId": "alder",
+      "wordingVerified": false,
+      "needsHumanReview": true
+    },
+    "steps": [
+      {
+        "name": "compare-quotes",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:43:36.934Z"
+      },
+      {
+        "name": "model / inspect",
+        "actor": "local model",
+        "kind": "model",
+        "status": "ok",
+        "at": "2026-10-30T21:43:40.389Z"
+      },
+      {
+        "name": "inspect-source",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:43:40.396Z"
+      },
+      {
+        "name": "model / draft",
+        "actor": "local model",
+        "kind": "model",
+        "status": "ok",
+        "at": "2026-10-30T21:44:03.254Z"
+      },
+      {
+        "name": "propose-review",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:44:03.273Z"
+      }
+    ],
+    "requestFiles": [
+      "ebddb95f-1ba1-4e9c-80c5-cc79517af4eb-inspect.json",
+      "ebddb95f-1ba1-4e9c-80c5-cc79517af4eb-draft.json"
+    ],
+    "syntheticData": true,
+    "execution": "actual local model; not a fixture"
+  },
+  {
+    "date": "2026-10-30",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "modelSha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+    "brief": {
+      "title": "Launch packaging",
+      "quantity": 1000,
+      "budgetCents": 280000,
+      "deliveryBy": "2026-11-23",
+      "minimumRecycled": 70,
+      "priority": "lowest_total"
+    },
+    "quotes": [
+      {
+        "id": "alder",
+        "name": "Alder Print",
+        "text": "ALDER PRINT / QUOTE ALD-104\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.40\nSetup: USD 120.00\nShipping: USD 95.00\nTax: included\nDelivery: 2026-11-24\nRecycled content: 80%\nPrices apply only to the quantity above.",
+        "short": "AP",
+        "accent": "clay",
+        "reference": "ALD-104"
+      },
+      {
+        "id": "northline",
+        "name": "Northline Packaging",
+        "text": "NORTHLINE PACKAGING / QUOTE NTH-208\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.05\nSetup: USD 180.00\nShipping: charged separately; amount to be confirmed\nTax: included\nDelivery: 2026-11-27\nRecycled content: 70%\nPlease request the freight charge before ordering.",
+        "short": "NP",
+        "accent": "blue",
+        "reference": "NTH-208"
+      },
+      {
+        "id": "paperfield",
+        "name": "Paperfield Co.",
+        "text": "PAPERFIELD CO. / QUOTE PAP-312\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.65\nSetup: USD 0.00\nShipping: USD 0.00\nTax: included\nDelivery: 2026-11-22\nRecycled content: 100%\nSetup and standard freight are included in this price.",
+        "short": "PC",
+        "accent": "sage",
+        "reference": "PAP-312"
+      }
+    ],
+    "review": {
+      "id": "4cdf7d68-aeea-4403-a064-a434ab3b1b26",
+      "actor": "agent",
+      "sources": [
+        {
+          "id": "paperfield:1",
+          "text": "PAPERFIELD CO. / QUOTE PAP-312",
+          "number": 1,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:2",
+          "text": "Item: Custom printed mailer boxes",
+          "number": 2,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:3",
+          "text": "Quantity: 1000",
+          "number": 3,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:4",
+          "text": "Unit price: USD 2.65",
+          "number": 4,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:5",
+          "text": "Setup: USD 0.00",
+          "number": 5,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:6",
+          "text": "Shipping: USD 0.00",
+          "number": 6,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:7",
+          "text": "Tax: included",
+          "number": 7,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        },
+        {
+          "id": "paperfield:8",
+          "text": "Delivery: 2026-11-22",
+          "number": 8,
+          "quoteId": "paperfield",
+          "quoteName": "Paperfield Co."
+        }
+      ],
+      "question": {
+        "text": "Could you please provide the final shipping amount for Northline Packaging's quote?",
+        "quoteId": "northline",
+        "sourceId": "northline:6"
+      },
+      "revision": 2,
+      "createdAt": "2026-10-30T21:47:16.069Z",
+      "rationale": "Paperfield Co. is preferred with a complete total of $2,650.00 because it meets all brief requirements, including 100% recycled content and on-time delivery. Missing Northline freight must be confirmed before its complete total can be compared.",
+      "sourceIds": [
+        "paperfield:1",
+        "paperfield:2",
+        "paperfield:3",
+        "paperfield:4",
+        "paperfield:5",
+        "paperfield:6",
+        "paperfield:7",
+        "paperfield:8"
+      ],
+      "candidateId": "paperfield",
+      "wordingVerified": false,
+      "needsHumanReview": true
+    },
+    "steps": [
+      {
+        "name": "compare-quotes",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:46:48.009Z"
+      },
+      {
+        "name": "model / inspect",
+        "actor": "local model",
+        "kind": "model",
+        "status": "ok",
+        "at": "2026-10-30T21:46:50.746Z"
+      },
+      {
+        "name": "inspect-source",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:46:50.752Z"
+      },
+      {
+        "name": "model / draft",
+        "actor": "local model",
+        "kind": "model",
+        "status": "ok",
+        "at": "2026-10-30T21:47:16.060Z"
+      },
+      {
+        "name": "propose-review",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:47:16.071Z"
+      }
+    ],
+    "requestFiles": [
+      "78080fd3-b10a-4484-921c-fee6f713ed45-inspect.json",
+      "78080fd3-b10a-4484-921c-fee6f713ed45-draft.json"
+    ],
+    "syntheticData": true,
+    "execution": "actual local model; not a fixture"
+  }
+]
