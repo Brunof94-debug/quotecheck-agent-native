@@ -1,0 +1,54 @@
+QUOTECHECK — PLANNING MEMO
+Fictional sample data · USD · revision 3
+
+BRIEF
+1000 units; max $2,600.00; delivery by 2026-11-28; recycled content ≥ 70%.
+
+SOURCE-BACKED COMPARISON
+Alder Print: $2,615.00; Outside brief (Budget)
+Northline Packaging: Total not quoted; known subtotal $2,230.00; Needs an answer
+Paperfield Co.: $2,650.00; Outside brief (Budget)
+
+ASSISTANT DRAFT — REVIEW WORDING AGAINST SOURCES
+Northline Packaging has the correct recycled content at 70% and meets the delivery deadline; its complete total is not yet available due to missing shipping. Missing Northline freight must be confirmed before its complete total can be compared.
+Citations: northline:6
+Unsent question: Could you please provide the final shipping amount for Northline Packaging's quote to complete the total?
+
+This memo does not approve an order or contact a supplier.
+Source lines
+
+Alder Print
+alder:1 ALDER PRINT / QUOTE ALD-104
+alder:2 Item: Custom printed mailer boxes
+alder:3 Quantity: 1000
+alder:4 Unit price: USD 2.40
+alder:5 Setup: USD 120.00
+alder:6 Shipping: USD 95.00
+alder:7 Tax: included
+alder:8 Delivery: 2026-11-24
+alder:9 Recycled content: 80%
+alder:10 Prices apply only to the quantity above.
+
+Northline Packaging
+northline:1 NORTHLINE PACKAGING / QUOTE NTH-208
+northline:2 Item: Custom printed mailer boxes
+northline:3 Quantity: 1000
+northline:4 Unit price: USD 2.05
+northline:5 Setup: USD 180.00
+northline:6 Shipping: charged separately; amount to be confirmed
+northline:7 Tax: included
+northline:8 Delivery: 2026-11-27
+northline:9 Recycled content: 70%
+northline:10 Please request the freight charge before ordering.
+
+Paperfield Co.
+paperfield:1 PAPERFIELD CO. / QUOTE PAP-312
+paperfield:2 Item: Custom printed mailer boxes
+paperfield:3 Quantity: 1000
+paperfield:4 Unit price: USD 2.65
+paperfield:5 Setup: USD 0.00
+paperfield:6 Shipping: USD 0.00
+paperfield:7 Tax: included
+paperfield:8 Delivery: 2026-11-22
+paperfield:9 Recycled content: 100%
+paperfield:10 Setup and standard freight are included in this price.

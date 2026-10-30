@@ -328,5 +328,114 @@
     ],
     "syntheticData": true,
     "execution": "actual local model; not a fixture"
+  },
+  {
+    "date": "2026-10-30",
+    "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+    "modelSha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+    "brief": {
+      "title": "Launch packaging",
+      "quantity": 1000,
+      "budgetCents": 260000,
+      "deliveryBy": "2026-11-28",
+      "minimumRecycled": 70,
+      "priority": "lowest_total"
+    },
+    "quotes": [
+      {
+        "id": "alder",
+        "name": "Alder Print",
+        "text": "ALDER PRINT / QUOTE ALD-104\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.40\nSetup: USD 120.00\nShipping: USD 95.00\nTax: included\nDelivery: 2026-11-24\nRecycled content: 80%\nPrices apply only to the quantity above.",
+        "short": "AP",
+        "accent": "clay",
+        "reference": "ALD-104"
+      },
+      {
+        "id": "northline",
+        "name": "Northline Packaging",
+        "text": "NORTHLINE PACKAGING / QUOTE NTH-208\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.05\nSetup: USD 180.00\nShipping: charged separately; amount to be confirmed\nTax: included\nDelivery: 2026-11-27\nRecycled content: 70%\nPlease request the freight charge before ordering.",
+        "short": "NP",
+        "accent": "blue",
+        "reference": "NTH-208"
+      },
+      {
+        "id": "paperfield",
+        "name": "Paperfield Co.",
+        "text": "PAPERFIELD CO. / QUOTE PAP-312\nItem: Custom printed mailer boxes\nQuantity: 1000\nUnit price: USD 2.65\nSetup: USD 0.00\nShipping: USD 0.00\nTax: included\nDelivery: 2026-11-22\nRecycled content: 100%\nSetup and standard freight are included in this price.",
+        "short": "PC",
+        "accent": "sage",
+        "reference": "PAP-312"
+      }
+    ],
+    "review": {
+      "id": "91f019e1-c38b-4a76-80c6-f78391253127",
+      "actor": "agent",
+      "sources": [
+        {
+          "id": "northline:6",
+          "text": "Shipping: charged separately; amount to be confirmed",
+          "number": 6,
+          "quoteId": "northline",
+          "quoteName": "Northline Packaging"
+        }
+      ],
+      "question": {
+        "text": "Could you please provide the final shipping amount for Northline Packaging's quote to complete the total?",
+        "quoteId": "northline",
+        "sourceId": "northline:6"
+      },
+      "revision": 3,
+      "createdAt": "2026-10-30T21:48:57.361Z",
+      "rationale": "Northline Packaging has the correct recycled content at 70% and meets the delivery deadline; its complete total is not yet available due to missing shipping. Missing Northline freight must be confirmed before its complete total can be compared.",
+      "sourceIds": [
+        "northline:6"
+      ],
+      "candidateId": null,
+      "wordingVerified": false,
+      "needsHumanReview": true
+    },
+    "steps": [
+      {
+        "name": "compare-quotes",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:48:33.318Z"
+      },
+      {
+        "name": "model / inspect",
+        "actor": "local model",
+        "kind": "model",
+        "status": "ok",
+        "at": "2026-10-30T21:48:35.366Z"
+      },
+      {
+        "name": "inspect-source",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:48:35.377Z"
+      },
+      {
+        "name": "model / draft",
+        "actor": "local model",
+        "kind": "model",
+        "status": "ok",
+        "at": "2026-10-30T21:48:57.355Z"
+      },
+      {
+        "name": "propose-review",
+        "actor": "agent",
+        "kind": "action",
+        "status": "ok",
+        "at": "2026-10-30T21:48:57.362Z"
+      }
+    ],
+    "requestFiles": [
+      "fdaed083-8209-4dd7-be27-4b7075992c7f-inspect.json",
+      "fdaed083-8209-4dd7-be27-4b7075992c7f-draft.json"
+    ],
+    "syntheticData": true,
+    "execution": "actual local model; not a fixture"
   }
 ]

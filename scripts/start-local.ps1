@@ -6,7 +6,7 @@ $quoteModel=Join-Path (Get-Location) '.runtime/Qwen3-4B-Instruct-2507-Q4_K_M.ggu
 $quoteServer=Join-Path (Get-Location) '.runtime/llama/llama-server.exe'
 $quoteAppPath=Join-Path (Get-Location) 'server.mjs'
 if(-not(Test-Path -LiteralPath $quoteModel) -or -not(Test-Path -LiteralPath $quoteServer)){throw 'Run node scripts/setup-model.mjs first.'}
-$quoteExisting=Get-CimInstance Win32_Process | Where-Object { $_.ExecutablePath -eq $quoteServer -or ($_.ExecutablePath -eq $quoteNode -and $_.CommandLine -match 'server\.mjs') -or ($_.Name -eq 'node.exe' -and $_.CommandLine.Contains($quoteAppPath)) }
+$quoteExisting=Get-CimInstance Win32_Process | Where-Object { $_.ExecutablePath -eq $quoteServer -or ($_.ExecutablePath -eq $quoteNode -and $_.CommandLine -match 'server\.mjs') -or ($_.Name -eq 'node.exe' -and $_.CommandLine -and $_.CommandLine.Contains($quoteAppPath)) }
 if($quoteExisting){throw 'QuoteCheck is already starting or running. Use stop-local.ps1 before starting another session.'}
 foreach($quotePort in @(4364,4365)){if(Get-NetTCPConnection -LocalPort $quotePort -State Listen -ErrorAction SilentlyContinue){throw "Port $quotePort is already in use. Close the existing QuoteCheck session first."}}
 $quoteThreads=[Math]::Min(8,[Environment]::ProcessorCount)

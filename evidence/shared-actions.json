@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-30T21:48:01.613Z",
+  "capturedAt": "2026-10-30T21:49:21.116Z",
   "entries": [
     {
       "kind": "action",
@@ -110,6 +110,94 @@
       "nativeSchema": true,
       "outputSha256": "94f75bfeaab05fcbe66e71f4e381896b8173d2afb38686c2fe00ff4286cee0ad",
       "at": "2026-10-30T21:47:16.071Z"
+    },
+    {
+      "kind": "action",
+      "name": "get-workspace",
+      "actor": "human",
+      "status": "ok",
+      "durationMs": 4,
+      "inputSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "nativeSchema": true,
+      "outputSha256": "3cdc0a0ca194335129e65bf0ca6d932431e1ac6b6607d5fc1cbf75b4389beaf6",
+      "at": "2026-10-30T21:48:01.598Z"
+    },
+    {
+      "kind": "action",
+      "name": "update-brief",
+      "actor": "human",
+      "status": "ok",
+      "durationMs": 6,
+      "inputSha256": "c6884a6bd6549fae35dd8a77180595f00befd6c24626c28c207b097587937138",
+      "nativeSchema": true,
+      "outputSha256": "137825cde7c3cc82f889bfd92f8bb49614073c386fa3af3c9bbc5faec035277e",
+      "at": "2026-10-30T21:48:29.297Z"
+    },
+    {
+      "kind": "action",
+      "name": "compare-quotes",
+      "actor": "human",
+      "status": "ok",
+      "durationMs": 11,
+      "inputSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "nativeSchema": true,
+      "outputSha256": "880f4353e993ebf30301b893680d743bb4fdd8d85658c1a7822f4d4bf5ebd88c",
+      "at": "2026-10-30T21:48:29.418Z"
+    },
+    {
+      "kind": "action",
+      "name": "compare-quotes",
+      "actor": "agent",
+      "status": "ok",
+      "durationMs": 7,
+      "inputSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "nativeSchema": true,
+      "outputSha256": "880f4353e993ebf30301b893680d743bb4fdd8d85658c1a7822f4d4bf5ebd88c",
+      "at": "2026-10-30T21:48:33.318Z"
+    },
+    {
+      "kind": "action",
+      "name": "inspect-source",
+      "actor": "agent",
+      "status": "ok",
+      "durationMs": 5,
+      "inputSha256": "4139582ff71ce4ec12917f9be560a70e396f83aa778ee66539327e1af34b3dad",
+      "nativeSchema": true,
+      "outputSha256": "a58b5a9411f0d19c2cc5b10ffdb8423de1d578ed2dadc2279e2d1c74511dc94d",
+      "at": "2026-10-30T21:48:35.377Z"
+    },
+    {
+      "kind": "action",
+      "name": "propose-review",
+      "actor": "agent",
+      "status": "ok",
+      "durationMs": 4,
+      "inputSha256": "1c6fd93913985ed7cd0d53275f8d2ec78b99aabb87fe4b8360ec3ff00602084e",
+      "nativeSchema": true,
+      "outputSha256": "67231e422208a13e76b541273cfbb14f3a288a21b015c469d2fc066ded60c406",
+      "at": "2026-10-30T21:48:57.362Z"
+    },
+    {
+      "kind": "action",
+      "name": "get-workspace",
+      "actor": "human",
+      "status": "ok",
+      "durationMs": 4,
+      "inputSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "nativeSchema": true,
+      "outputSha256": "20bbbc7cb6bba8711959f1705428ed8aa1c673a4cdefd140749a9854859eaf12",
+      "at": "2026-10-30T21:49:07.599Z"
+    },
+    {
+      "kind": "action",
+      "name": "compare-quotes",
+      "actor": "human",
+      "status": "ok",
+      "durationMs": 5,
+      "inputSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "nativeSchema": true,
+      "outputSha256": "880f4353e993ebf30301b893680d743bb4fdd8d85658c1a7822f4d4bf5ebd88c",
+      "at": "2026-10-30T21:49:07.631Z"
     }
   ],
   "data": "fictional"

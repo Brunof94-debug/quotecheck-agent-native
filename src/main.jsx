@@ -84,6 +84,8 @@ function App(){
     const u=URL.createObjectURL(new Blob([text],{type:'text/plain'})),a=document.createElement('a');a.href=u;a.download='quotecheck-revision-'+state.revision+'.txt';a.click();URL.revokeObjectURL(u);setNotice('Planning memo downloaded.');
   }
   const c=state.comparison,review=state.reviews.find(r=>r.revision===state.revision),running=job?.status==='running';
+  const pending=c.rows.filter(q=>q.unknown.length);
+  const missingNote=pending.length?pending.map(q=>q.name+' still needs '+q.unknown.map(k=>labels[k].toLowerCase()).join(', ')+' confirmed.').join(' ')+' An incomplete offer cannot be ranked as a complete match.':'Every proposal now includes all required source fields. Check the brief before deciding.';
   const selected=source?(source.archive?compareQuotes(recorded.quotes,recorded.brief).rows:c.rows).find(q=>q.id===source.id):null;
   const citation=(q,field)=><button className="cite" title={'Read '+q.name+' source for '+labels[field]} onClick={()=>openSource(q.id,q.facts[field].sourceId)}>L{q.facts[field].sourceId?.split(':')[1]??'—'}<Icon name="link" size={10}/></button>;
   const cell=(q,field)=>{
@@ -119,7 +121,7 @@ function App(){
                 <tr><th scope="row">Recycled content</th>{c.rows.map(q=>cell(q,'recycled'))}</tr>
                 <tr className="source-row"><th scope="row">Original proposal</th>{c.rows.map(q=><td key={q.id}><button onClick={()=>openSource(q.id)}><Icon name="source" size={14}/>Read source <Icon name="arrow" size={13}/></button></td>)}</tr>
               </tbody></table></div>
-              <div className="finding"><span className="finding-symbol">!</span><div><strong>{c.missingCount?'A low unit price is only part of the picture.':'The complete costs are ready to compare.'}</strong><p>{c.rows.find(q=>q.unknown.includes('shipping'))?.name??'One proposal'}{c.missingCount?" needs a final freight amount before its total can be compared.":" has all required source fields. Check the brief before deciding."}</p></div></div>
+              <div className="finding"><span className="finding-symbol">!</span><div><strong>{c.missingCount?'A low unit price is only part of the picture.':'The complete costs are ready to compare.'}</strong><p>{missingNote}</p></div></div>
               <div className="try-card"><div><span className="eyebrow">WHAT IF THE BRIEF CHANGES?</span><p>Try a tighter deadline or a smaller budget.</p></div><div className="scenario-buttons"><button disabled={busy} onClick={()=>quickBrief('earlier')}>Need it by Nov 23</button><button disabled={busy} onClick={()=>quickBrief('tight')}>Budget: $2,600</button><button disabled={busy} className="reset" onClick={()=>quickBrief('reset')}>Reset</button></div></div>
               <div className="method-note"><Icon name="check" size={14}/><span>Calculated in integer cents. Missing charges stay unknown. Source text is never an instruction to the assistant.</span></div>
             </>}

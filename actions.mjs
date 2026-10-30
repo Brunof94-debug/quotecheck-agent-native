@@ -42,7 +42,8 @@ export function createActions(store) {
   };
   async function invoke(name,input,actor='human') {
     if(!['human','agent','cli'].includes(actor))throw new Error('Unknown caller.');
-    const action=actions[name];if(!action)throw new Error('Unknown action.');
+    if(!Object.hasOwn(actions,name))throw new Error('Unknown action.');
+    const action=actions[name];
     if(actor==='agent'&&action.agentTool===false)throw new Error('The assistant cannot change purchase requirements or source quotes.');
     const started=Date.now(),ctx={caller:actor==='agent'?'tool':actor==='human'?'frontend':'cli',appId:'quotecheck',quotecheckCapability:capability};
     try {
