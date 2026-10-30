@@ -1,0 +1,20 @@
+import {mkdir,writeFile} from 'node:fs/promises';
+const id=process.argv[2];if(!/^[A-Za-z0-9]{8,20}$/.test(id??''))throw new Error('Provide the public Clips ID.');
+const page=await fetch('https://clips.agent-native.com/r/'+id),html=await page.text();
+const link=html.match(/"agentContextUrl":"([^"]+)"/)?.[1]?.replaceAll('\\/','/');
+if(!page.ok||!link)throw new Error('The anonymous page did not expose its public context.');
+const u=new URL(link);if(u.origin!=='https://clips.agent-native.com'||u.searchParams.has('token'))throw new Error('Expected a public context URL.');
+const response=await fetch(u),context=await response.json();
+if(!response.ok||context.clip.id!==id)throw new Error('Context is unavailable.');
+const folder='.runtime/demo/'+id;await mkdir(folder,{recursive:true});
+await writeFile(folder+'/context.json',JSON.stringify(context,null,2)+'\n');
+const times=[350,20000,55000,85000,115000,Math.max(0,context.clip.durationMs-1000)];
+const frames=await Promise.all(times.map(async at=>{
+  const url=context.apis.frame.urlTemplate.replace('{timestampMs}',at);
+  const r=await fetch(url);if(!r.ok||!r.headers.get('content-type')?.includes('image/jpeg'))throw new Error('Frame unavailable: '+at);
+  const path=folder+'/'+at+'.jpg';await writeFile(path,Buffer.from(await r.arrayBuffer()));return {at,path};
+}));
+const share=await fetch(context.clip.publicPageUrl,{redirect:'follow'});
+const result={publicUrl:context.clip.publicPageUrl,http:share.status,title:context.clip.title,durationMs:context.clip.durationMs,width:context.clip.width,height:context.clip.height,hasAudio:context.clip.hasAudio,hasCamera:context.clip.hasCamera,frames};
+await writeFile(folder+'/verification.json',JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify(result,null,2));

@@ -1,6 +1,7 @@
 import {readFile,readdir,mkdir,writeFile} from 'node:fs/promises';
 import {initialBrief,sampleQuotes} from '../data/quotes.mjs';
 import {digest} from '../store.mjs';
+import {money} from '../domain.mjs';
 const base='http://127.0.0.1:4364';
 const session=await fetch(base+'/api/session');
 const cookie=session.headers.get('set-cookie').split(';')[0],{token}=await session.json();
@@ -16,13 +17,16 @@ const scenarios=[];
 for(const revision of [1,2,3]){
   const review=state.reviews.find(r=>r.revision===revision);
   if(!review)continue;
-  const draft=runs.find(r=>r.stage==='draft'&&JSON.parse(r.response.choices[0].message.content).rationale===review.rationale);
+  const draft=runs.find(r=>{if(r.stage!=='draft')return false;const args=JSON.parse(r.response.choices[0].message.content);return args.revision===revision&&args.rationale===review.rationale&&Math.abs(Date.parse(r.finished)-Date.parse(review.createdAt))<5000;});
   if(!draft)throw new Error('No real request/response matches the saved draft.');
   const inspect=runs.find(r=>r.jobId===draft.jobId&&r.stage==='inspect');
   if(!inspect)throw new Error('The inspection request is missing.');
   for(const run of [inspect,draft]){const {file,...record}=run;await writeFile('evidence/model-runs/'+file,JSON.stringify(record,null,2)+'\n');}
   const brief={...initialBrief,...(revision===2?{deliveryBy:'2026-11-23'}:revision===3?{budgetCents:260000}:{})};
+  const actualBrief=JSON.parse(draft.request.messages.at(-1).content).facts.brief;
+  if(actualBrief.maximumTotal!==money(brief.budgetCents)||actualBrief.deliveryBy!==brief.deliveryBy||actualBrief.quantity!==brief.quantity||actualBrief.minimumRecycled!==brief.minimumRecycled||actualBrief.priority!==brief.priority)throw new Error('Recorded brief does not match the authored scenario.');
   const steps=state.log.filter(l=>l.actor==='agent'&&Date.parse(l.at)>=Date.parse(inspect.started)-1000&&Date.parse(l.at)<=Date.parse(review.createdAt)+1000).reverse().map(l=>({name:(l.kind==='model'?'model / ':'')+l.name,actor:l.kind==='model'?'local model':'agent',kind:l.kind,status:l.status,at:l.at}));
+  if(revision===1&&steps.length<3){const earlier=JSON.parse(await readFile('public/evidence/recorded-review.json','utf8'));if(earlier.review.id!==review.id)throw new Error('Earlier log capture does not match this review.');steps.push(...earlier.steps);}
   scenarios.push({date:review.createdAt.slice(0,10),model:release.model,modelSha256:release.modelSha256,brief,quotes:state.quotes,review,steps,requestFiles:[inspect.file,draft.file],syntheticData:true,execution:'actual local model; not a fixture'});
 }
 if(!scenarios.length)throw new Error('No completed real scenario.');

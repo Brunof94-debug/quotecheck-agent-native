@@ -4,7 +4,7 @@
 
 The lowest unit price can hide an incomplete offer. QuoteCheck compares source-backed supplier costs against a purchase brief, keeps unquoted freight unknown, and gives a person and a local assistant the same validated actions for reviewing the decision.
 
-[Interactive sample](https://brunof94-debug.github.io/quotecheck-agent-native/) · [Architecture](docs/architecture.md) · [Demo walkthrough](docs/demo-script.md) · [Original work and third-party components](THIRD_PARTY.md)
+[Interactive sample](https://brunof94-debug.github.io/quotecheck-agent-native/) · [Watch the live demo on Clips](https://clips.agent-native.com/share/VPtqwOBQYvAU) · [Architecture](docs/architecture.md) · [Original work and third-party components](THIRD_PARTY.md)
 
 ## The working flow
 

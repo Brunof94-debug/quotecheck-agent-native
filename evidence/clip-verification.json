@@ -1,0 +1,39 @@
+{
+  "publicUrl": "https://clips.agent-native.com/share/VPtqwOBQYvAU",
+  "http": 200,
+  "title": "QuoteCheck — See the whole quote | Live Agent-Native demo",
+  "durationMs": 142145,
+  "width": 1280,
+  "height": 720,
+  "hasAudio": false,
+  "hasCamera": false,
+  "frames": [
+    {
+      "atMs": 350,
+      "sha256": "4297e47750baf653cbc960a78bb257e6c331a7d413ae1d8adeb1146d76ba572f"
+    },
+    {
+      "atMs": 20000,
+      "sha256": "6e29f0c55b74d7690f2a37f50122d9aa81fce396e4086ac143eb0df3a6294276"
+    },
+    {
+      "atMs": 55000,
+      "sha256": "1a8182ecc2a9367c15c6492c47cbfe27512183dc00f39d7b2aceb89e39be0e75"
+    },
+    {
+      "atMs": 85000,
+      "sha256": "4944623eecd03915c2789fc90ff6dc1cbfd0dda3820f4f9d8229200bee74da58"
+    },
+    {
+      "atMs": 115000,
+      "sha256": "f71b4eeb7728e433d0d354b7581a3e16caca76a418a5f894a1609bf7230400fb"
+    },
+    {
+      "atMs": 141145,
+      "sha256": "51f13392d00369605bfabd95f5901787280e263b3e82156871a028d304f1db9e"
+    }
+  ],
+  "checkedAt": "2026-10-30T22:12:29.616Z",
+  "reviewed": "Six frames visually inspected: local workspace, model progress, Alder draft, changed deadline, Paperfield draft and memo export. All use fictional app data.",
+  "authentication": "Public page, context and frames fetched without cookies or Authorization headers."
+}

@@ -287,27 +287,6 @@
     },
     "steps": [
       {
-        "name": "compare-quotes",
-        "actor": "agent",
-        "kind": "action",
-        "status": "ok",
-        "at": "2026-10-30T21:46:48.009Z"
-      },
-      {
-        "name": "model / inspect",
-        "actor": "local model",
-        "kind": "model",
-        "status": "ok",
-        "at": "2026-10-30T21:46:50.746Z"
-      },
-      {
-        "name": "inspect-source",
-        "actor": "agent",
-        "kind": "action",
-        "status": "ok",
-        "at": "2026-10-30T21:46:50.752Z"
-      },
-      {
         "name": "model / draft",
         "actor": "local model",
         "kind": "model",

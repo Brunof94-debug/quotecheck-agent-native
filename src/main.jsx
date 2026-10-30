@@ -27,6 +27,7 @@ function App(){
   const [busy,setBusy]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState(''),[job,setJob]=useState(null),[focus,setFocus]=useState('');
   const [modelReady,setModelReady]=useState(false),[recorded,setRecorded]=useState(null),[example,setExample]=useState(false);
   const stream=useRef(null),closeRef=useRef(null);
+  useEffect(()=>{if(mode==='local')document.title='QuoteCheck LOCAL DEMO — Live review';else if(mode==='sample')document.title='QuoteCheck — Interactive sample';},[mode]);
   useEffect(()=>{
     let cancelled=false;
     (async()=>{

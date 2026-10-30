@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-30T22:06:15.282Z",
+  "automated": {
+    "runner": "node --test",
+    "passed": 6,
+    "failed": 0,
+    "fixtureNote": "The provider-failure test uses a mock HTTP server and is not counted as a model execution."
+  },
+  "realModelScenarios": [
+    {
+      "revision": 1,
+      "candidate": "alder",
+      "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+      "source": "actual saved request/response pairs in evidence/model-runs"
+    },
+    {
+      "revision": 2,
+      "candidate": "paperfield",
+      "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+      "source": "actual saved request/response pairs in evidence/model-runs"
+    },
+    {
+      "revision": 3,
+      "candidate": null,
+      "model": "Qwen3-4B-Instruct-2507-Q4_K_M",
+      "source": "actual saved request/response pairs in evidence/model-runs"
+    }
+  ],
+  "browserChecks": [
+    "Initial comparison and source inspection in local app",
+    "Earlier deadline leaves Paperfield as the complete eligible quote",
+    "Reduced budget leaves no complete match",
+    "Planning memo downloaded and checked against source lines",
+    "Public sample edit: USD 50 freight gives USD 2280 total",
+    "Recorded source stays frozen after editing the public sample",
+    "Mobile viewport: document width 375px; horizontal scrolling stays inside the comparison table"
+  ],
+  "build": "Vite build completed successfully",
+  "submission": "ready for rules acceptance; not yet submitted",
+  "publicClip": "https://clips.agent-native.com/share/VPtqwOBQYvAU",
+  "directCli": {
+    "revision": 7,
+    "preferred": "paperfield",
+    "status": "passed after stopping the app"
+  }
+}

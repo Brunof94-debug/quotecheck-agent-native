@@ -24,7 +24,7 @@ Original development began on October 30, 2026, during the hackathon. Bruno is t
 - Project: QuoteCheck — See the whole quote
 - Repository: https://github.com/Brunof94-debug/quotecheck-agent-native
 - Public sample: https://brunof94-debug.github.io/quotecheck-agent-native/
-- Public Clips recording: pending actual recording, publication and anonymous-access verification
+- Public Clips recording: https://clips.agent-native.com/share/VPtqwOBQYvAU — actual local app, 142 seconds, public page and six video frames checked without authentication
 - Slides: optional, leave blank
 - Marketing: leave unchecked
 
